@@ -1,0 +1,20 @@
+#!/bin/sh
+
+regex='@hotmail\.com$'
+# regex='@company1\.com$'
+
+email=$GIT_AUTHOR_EMAIL
+
+# Note [[$email with no space doesn't work - spacing is important!
+if [[ $email =~ $regex ]];
+then 
+  echo Your email $email satisfies GIT policy.
+  exit 0
+
+else 
+  echo "Your email $email doesn't satisfy GIT policy."
+  exit 1
+
+fi      # finalise
+
+

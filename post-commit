@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo Thanks for committing $GIT_AUTHOR_NAME
+# $GIT_AUTHOR_NAME is an environment variable
+
+# exit 0 // Exit code has no effect as happens after commit
